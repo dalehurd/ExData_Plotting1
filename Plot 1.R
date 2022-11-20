@@ -9,7 +9,7 @@ data <- cbind(data, date_extra)
 
 
 #sort by the dates given for the assignment
-subset_data <- subset(data,power$Date=="1/2/2007" | data$Date =="2/2/2007")
+subset_data <- subset(data,data$Date=="1/2/2007" | data$Date =="2/2/2007")
 
 
 #set the data types as appropriate
@@ -25,6 +25,7 @@ subset_data$Sub_metering_3 <- as.numeric(subset_data$Sub_metering_3)
 
 
 #Create plot
-hist(subset_data$Global_active_power, main="Global Active Power", xlab="Global Active Power (kilowatts)", ylab="Frequency", col="Red")
 png("plot1.png", width=480, height=480)
+hist(subset_data$Global_active_power, main="Global Active Power", xlab="Global Active Power (kilowatts)", ylab="Frequency", col="Red")
+
 dev.off()
