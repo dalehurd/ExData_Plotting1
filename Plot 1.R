@@ -9,7 +9,7 @@ data <- cbind(data, date_extra)
 
 
 #sort by the dates given for the assignment
-subset_data <- subset(data,data$Date=="1/2/2007" | data$Date =="2/2/2007")
+subset_data <- subset(data,power$Date=="1/2/2007" | data$Date =="2/2/2007")
 
 
 #set the data types as appropriate
